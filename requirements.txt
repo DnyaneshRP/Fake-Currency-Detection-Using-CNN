@@ -1,0 +1,4 @@
+numpy==1.26.3
+Flask==3.0.0
+tensorflow==2.15.0
+CurrencyConverter==0.17.21
