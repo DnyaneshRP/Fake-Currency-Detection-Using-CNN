@@ -1,0 +1,81 @@
+/* Reset default margin and padding */
+body, h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    text-align:center;
+}
+/* Global styles */
+body {
+    font-family: 'Helvetica', Arial, sans-serif; /* Use Helvetica font as the primary choice */
+    background-color: #EFEFEF; /* Light gray background */
+    color: #333; /* Default text color */
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5001;
+    padding: 5px 20px; /* Adjusted padding */
+    color: #FFFFFF;
+    height: 60px; /* Adjusted height */
+}
+
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo img {
+    width: 40px; /* Adjust icon size */
+    height: 40px; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.menu-nav a {
+    color: #FFFFFF; /* White text color for navigation links */
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.menu-nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.main-content {
+    max-width: 800px; /* Adjust max width for widescreen layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* White container background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #646368; /* Dark gray background for footer */
+    color: #FFFFFF; /* White text color for footer */
+    margin-top: 30px;
+    border-radius: 0px;
+}
+
+/* Additional divs for images */
+.additional-div {
+    padding: 30px;
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #000000; /* Black border */
+    border-radius: 10px;
+    text-align: center; /* Center align content */
+    margin-top: 30px; /* Add margin to separate from previous section */
+}
+
+.additional-div img {
+    max-width: 60%; /* Limit image width to fit container */
+    height: auto; /* Maintain aspect ratio */
+}

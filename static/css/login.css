@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('static/images/bglg.jpg');
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-position: center; /* Center the background image */
+}
+
+#container {
+    background-color: #FFFFFF; /* White container background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 30px;
+    max-width: 400px;
+    width: 80%; /* Adjust container width */
+    text-align: center;
+}
+
+h1 {
+    color: #FF5001; /* Orange color for headings */
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #FF5001; /* Orange button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF3D00; /* Darker orange on hover */
+}
+
+.message {
+    color: #FF0000; /* Red color for error message */
+    margin-bottom: 20px;
+}

@@ -1,0 +1,139 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Global styles */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: #EFEFEF;
+    color: #333;
+}
+
+/* Menu bar styles */
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5001;
+    padding: 5px 20px; /* Adjusted padding */
+    color: #FFFFFF;
+    height: 60px; /* Adjusted height */
+}
+
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.menu-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=file],
+select,
+button {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #D3D3D3; /* Light gray border */
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+button {
+    padding: 12px 24px; /* Increase padding to make button larger */
+    background-color: #009933; /* Green button color */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px; /* Increase font size for button text */
+}
+
+button:hover {
+    background-color: #006622; /* Darker green color on hover */
+}
+
+/* Uploaded image and prediction result styles */
+#uploaded-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#uploaded-image img {
+    max-width: 100%; /* Limit image width to fit container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Increase width to 80% of its container */
+    display: block; /* Ensure image is displayed as a block element */
+    margin: 0 auto; /* Center align the image horizontally */
+}
+
+/* Prediction result styles */
+#predictions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#prediction-result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Color classes for prediction result */
+.real-currency {
+    color: green; /* Green color for real currency */
+}
+
+.fake-currency {
+    color: red; /* Red color for fake currency */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #646368;
+    color: #FFFFFF;
+    margin-top: 30px;
+    border-radius: 0px;
+}

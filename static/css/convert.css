@@ -1,0 +1,126 @@
+/* Menu bar styles */
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5001;
+    padding: 5px 20px; /* Adjusted padding */
+    color: #FFFFFF;
+    height: 60px; /* Adjusted height */
+    position: fixed; /* Fix at the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Logo in menu bar */
+.menu-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.menu-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(244, 244, 244);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('{{ url_for('static', filename='static/images/backgroundconb.jpg') }}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensure background stays fixed */
+}
+
+/* Container styles */
+.container {
+    width: 35%;
+    background-color: rgba(255, 255, 255, 1); /* Increase opacity */
+    padding: 20px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 120px; /* Add margin to push down from top */
+    margin-bottom: 80px; /* Add margin to push up from bottom */
+}
+
+h1 {
+    font-size: 32px;
+    color: ;
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.input-group {
+    margin-bottom: 30px; /* Increased margin bottom */
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block; /* Ensure labels are block-level elements */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+select, input[type="number"] {
+    padding: 12px; /* Increased padding */
+    width: 220px; /* Increased width */
+    border-radius: 8px; /* Increased border radius */
+    border: 2px solid #ccc; /* Increased border thickness */
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    padding: 12px 24px; /* Increased padding */
+    background-color: #009933;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size */
+}
+
+input[type="submit"]:hover {
+    background-color: #006622;
+}
+
+/* Result and error styles */
+.result, .error {
+    font-size: 20px; /* Reduced font size */
+    font-weight: bold;
+    margin-top: 20px; /* Add margin top */
+}
+
+.result {
+    color: #28a745; /* Result color */
+}
+
+.error {
+    color: #dc3545; /* Error color */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    background-color: #646368; /* Dark gray background for footer */
+    color: #FFFFFF; /* White text color for footer */
+    border-radius: 0px;
+    width: 100%;
+}
