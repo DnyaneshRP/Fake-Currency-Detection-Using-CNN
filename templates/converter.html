@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Fake Indian Currency Detection</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}"> <!-- Icon for the browser tab -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/convert.css') }}"> <!-- Link to external CSS file -->
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='images/backgroundconb.jpg') }}');">
+    <!-- Menu bar -->
+    <div class="menu-bar">
+        <div class="menu-logo">
+            <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Project Icon">
+            <h2>Fake Indian Currency Detection</h2>
+        </div>
+        <div class="menu-nav">
+            <a href="/dashboard">Home</a>
+            <a href="/detect">Detect</a>
+            <a href="/analysis">Analysis</a>
+            <a href="/converter">Converter</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <form action="/convert" method="post">
+            <div class="input-group">
+                <label for="from_currency">From Currency:</label>
+                <select id="from_currency" name="from_currency" required>
+                    <option value="" disabled selected>Select a currency</option>
+                    {% for currency in currencies %}
+                        <option value="{{ currency }}">{{ currency }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="to_currency">To Currency:</label>
+                <select id="to_currency" name="to_currency" required>
+                    <option value="" disabled selected>Select a currency</option>
+                    {% for currency in currencies %}
+                        <option value="{{ currency }}">{{ currency }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <input type="submit" value="Convert">
+        </form>
+        {% if result %}
+            <div class="result">
+                <p>{{ amount }} {{ from_currency }} is equal to {{ result }} {{ to_currency }}</p>
+            </div>
+        {% endif %}
+        {% if error %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Fake Indian Currency Detection</p>
+    </footer>
+
+</body>
+
+</html>

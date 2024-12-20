@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fake Indian Currency Detection</title>
+    <link rel="icon" href="/static/images/icon.png"> <!-- Icon for the browser tab -->
+    <link rel="stylesheet" href="/static/css/dashboard.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+    <!-- Menu bar -->
+    <div class="menu-bar">
+        <div class="menu-logo">
+            <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Project Icon">
+            <h2>Fake Indian Currency Detection</h2>
+        </div>
+        <div class="menu-nav">
+            <a href="/dashboard">Home</a>
+            <a href="/detect">Detect</a>
+            <a href="/analysis">Analysis</a>
+            <a href="/converter">Converter</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="section">
+            <h1>Welcome to Fake Indian Currency Detection</h1><br>
+            <p>Welcome to the Fake Indian Currency Detection website, dedicated to combating the proliferation of counterfeit banknotes in circulation. Counterfeiting poses a significant threat to financial systems and undermines public trust in currency. Our platform equips individuals and businesses with tools to identify and distinguish genuine Indian currency notes from counterfeit replicas. Through advanced image processing and machine learning technologies, we empower users to detect subtle security features and intricate designs unique to legitimate banknotes.</p><br>
+            <p>In the realm of currency security, the ₹ 500, ₹ 200, and ₹ 100 denominations stand as pillars of financial integrity. These banknotes integrate sophisticated anti-counterfeit measures, including watermarking, security threads, and microprinting, to thwart unauthorized replication. Our website offers an immersive exploration of these security elements, unraveling the intricacies of each denomination's design. By understanding the nuanced characteristics of authentic currency, users gain essential knowledge to safeguard against financial fraud and illicit activities.</p>
+        </div>
+
+        <div class="section">
+            <h2>Currency Information</h2><br>
+            <div class="currency-info">
+                <div class="currency">
+                    <h3>₹ 500 Note</h3><br>
+                    <img src="{{ url_for('static', filename='images/500_note.jpg') }}" alt="₹ 500 Note"><br><br>
+                    <p>The ₹ 500 denomination banknotes in the <b>Mahatma Gandhi (New) Series</b> bear signature of the Governor, Reserve Bank of India. The note has motif of <b>"Red Fort"</b> on reverse, depicting country's cultural heritage. The base colour of the note is <b>"Stone Grey"</b>. The note has other designs and geometric patterns aligning with the overall colour scheme, both at obverse and reverse. <br><b>The size of the note is 66mm x 150mm</b></p>
+                </div>
+                <div class="currency">
+                    <h3>₹ 200 Note</h3><br>
+                    <img src="{{ url_for('static', filename='images/200_note.jpg') }}" alt="₹ 200 Note"><br><br>
+                    <p>The ₹ 200 denomination banknotes in the <b>Mahatma Gandhi (New) Series</b> bear signature of the Governor, Reserve Bank of India. The note has motif of <b>"Sanchi Stupa"</b> on reverse, depicting country's cultural heritage. The base colour of the note is <b>"Bright Yellow"</b>. The note has other designs and geometric patterns aligning with the overall colour scheme, both at obverse and reverse. <br><b>The size of the note is 66mm x 146mm</b></p>
+                </div>
+                <div class="currency">
+                    <h3>₹ 100 Note</h3><br>
+                    <img src="{{ url_for('static', filename='images/100_note.jpg') }}" alt="₹ 100 Note"><br><br>
+                    <p>The ₹ 100 denomination banknotes in the <b>Mahatma Gandhi (New) Series</b> bear signature of the Governor, Reserve Bank of India. The note has motif of <b>"Rani Ki Vav"</b> on reverse, depicting country's cultural heritage. The base colour of the note is <b>"Lavender"</b>. The note has other designs and geometric patterns aligning with the overall colour scheme, both at obverse and reverse. <br><b>The size of the note is 66mm x 142mm</b></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h2>Security Features of Currency Notes</h2>
+        <!-- Additional divs for images -->
+        <div class="additional-div">
+            <img src="{{ url_for('static', filename='images/Rs500_details.jpg') }}" alt="Image 1">
+        </div><br>
+        <div class="additional-div">
+            <img src="{{ url_for('static', filename='images/Rs200_details.jpg') }}" alt="Image 2">
+        </div><br>
+        <div class="additional-div">
+            <img src="{{ url_for('static', filename='images/Rs100_details.jpg') }}" alt="Image 3">
+        </div><br>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Fake Indian Currency Detection</p>
+    </footer>
+
+</body>
+
+</html>

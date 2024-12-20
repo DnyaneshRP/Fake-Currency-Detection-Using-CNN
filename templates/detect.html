@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Detection - Fake Indian Currency Detection</title>
+    <link rel="icon" href="/static/images/icon.png">
+    <link rel="stylesheet" href="/static/css/detect.css">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-logo">
+            <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Project Icon">
+            <h2>Fake Indian Currency Detection</h2>
+        </div>
+        <div class="menu-nav">
+            <a href="/dashboard">Home</a>
+            <a href="/detect">Detect</a>
+            <a href="/analysis">Analysis</a>
+            <a href="/converter">Converter</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <h1>Currency Detection</h1><br>
+            <form action="/detect" method="post" enctype="multipart/form-data" id="upload-form">
+                <div class="form-container">
+                    <input type="file" name="file" id="file" onchange="previewImage(event)">
+                    <select name="denomination" id="denomination">
+                        <option value="500">₹ 500 Note</option>
+                        <option value="200">₹ 200 Note</option>
+                        <option value="100">₹ 100 Note</option>
+                    </select>
+                </div>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <div id="uploaded-image">
+                <img id="preview-image" src="#" alt="Uploaded Currency" class="uploaded-image" style="display: none;">
+            </div>
+            <div id="predictions">
+                {% if message %}
+                    <p>{{ message }}</p>
+                {% endif %}
+                {% if result %}
+                    <h2>Prediction Result:</h2>
+                    <p id="prediction-result" class="{{ result_class }}">{{ result }}</p><br>
+                    <!-- Hidden audio element with autoplay -->
+                    <audio id="prediction-audio" style="display: none;">
+                        <source src="{{ url_for('static', filename=audio_file) }}" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Fake Indian Currency Detection</p>
+    </footer>
+
+    <script>
+        function previewImage(event) {
+            var preview = document.getElementById('preview-image');
+            preview.style.display = 'block';
+            preview.src = URL.createObjectURL(event.target.files[0]);
+        }
+
+        // Function to play audio automatically after processing
+        function playAudio() {
+            var audio = document.getElementById('prediction-audio');
+            audio.play();
+        }
+
+        // Automatically play audio when prediction result is displayed
+        window.onload = function() {
+            // Check if prediction result exists
+            var predictionResult = document.getElementById('prediction-result');
+            if (predictionResult && predictionResult.textContent) {
+                // Call playAudio function after a delay (adjust the delay time as needed)
+                setTimeout(playAudio); // Delay in milliseconds
+            }
+        };
+    </script>
+</body>
+
+</html>
